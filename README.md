@@ -1,5 +1,5 @@
 # mern-stack-ecommerce
-This is the course project from MERN eCommerce From Scratch[Course Linke] course
+This is the course project from [MERN eCommerce From Scratch][Course Link] course
 
 
-[Course Linke]: https://www.udemy.com/course/mern-ecommerce
+[Course Link]: https://www.udemy.com/course/mern-ecommerce
