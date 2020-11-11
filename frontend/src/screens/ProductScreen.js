@@ -31,12 +31,16 @@ const ProductScreen = ({ history, match }) => {
         if (successProductReview) {
             setRating(0)
             setComment('')
-            dispatch({ type: PRODUCT_CREATE_REVIEW_RESET })
+            dispatch(listProductDetails(match.params.id))
         }
 
-         dispatch(listProductDetails(match.params.id))
+        if (!product._id || product._id !== match.params.id) {
+            dispatch(listProductDetails(match.params.id))
+            dispatch({ type: PRODUCT_CREATE_REVIEW_RESET })
+          }
 
-    }, [dispatch, match, successProductReview])
+
+    }, [dispatch, match, successProductReview, product])
 
     const addToCartHandler = () => {
         history.push(`/cart/${match.params.id}?qty=${qty}`)

@@ -168,7 +168,7 @@ const OrderScreen = ({ match, history }) => {
                                 </Row>
                             </ListGroup.Item>
 
-                            {!order.isPaid && (
+                            {userInfo._id === order.user._id && !order.isPaid &&  (
                                 <ListGroup.Item>
                                     {loadingPay && <Loader />}
                                     {!sdkReady ? <Loader /> : (
