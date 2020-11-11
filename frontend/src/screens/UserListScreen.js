@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { listUsers, deleteUser } from '../actions/userActions'
+import Meta from '../components/Meta'
 
 const UserListScreen = ({ history }) => {
 
@@ -37,6 +38,7 @@ const UserListScreen = ({ history }) => {
     return (
         <>
             <h1>Users</h1>
+            <Meta title={'Welcome To MenlahShop | Users List'} />
             {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
                 <Table striped bordered hover responsive className='table-sm'>
                     <thead>

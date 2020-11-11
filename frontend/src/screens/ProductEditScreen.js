@@ -8,6 +8,7 @@ import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { listProductDetails, updateProduct } from '../actions/productActions'
 import { PRODUCT_UPDATE_RESET } from '../constants/productContants'
+import Meta from '../components/Meta'
 
 const ProductEditScreen = ({ match, history }) => {
 
@@ -95,6 +96,8 @@ const ProductEditScreen = ({ match, history }) => {
 
         <>
             <Link to='/admin/products' className='btn btn-light my-3'>Go Back</Link>
+
+            <Meta title={'Welcome To MenlahShop | Product Edit'} />
 
             <FormContainer>
                 <h1>Edit Product</h1>

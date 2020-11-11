@@ -7,6 +7,7 @@ import Loader from '../components/Loader'
 import Paginate from '../components/Paginate'
 import { listProducts, deleteProduct, createProduct } from '../actions/productActions'
 import { PRODUCT_CREATE_RESET } from '../constants/productContants'
+import Meta from '../components/Meta'
 
 const ProductListScreen = ({ history, match }) => {
 
@@ -55,6 +56,7 @@ const ProductListScreen = ({ history, match }) => {
     return (
         <>
             <Row className='align-items-center pb-3'>
+                <Meta title={'Welcome To MenlahShop | Products List'} />
                 <Col>
                     <h1>Products</h1>
                 </Col>

@@ -7,6 +7,7 @@ import Loader from '../components/Loader'
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userContants'
 import { listMyOrders } from '../actions/orderActions' 
+import Meta from '../components/Meta'
 
 const ProfileScreen = ({ location, history }) => {
     const [name, setName] = useState('')
@@ -54,6 +55,7 @@ const ProfileScreen = ({ location, history }) => {
     }
 
     return <Row>
+        <Meta title={'Welcome To MenlahShop | Profile'} />
         <Col md={3}>
         <h2>User Profile</h2>
         {message && <Message variant='danger'>{message}</Message>}

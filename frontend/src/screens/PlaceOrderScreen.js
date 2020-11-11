@@ -8,6 +8,7 @@ import { addToCart, removeFromCart } from '../actions/cartActions'
 import { createOrder } from '../actions/orderActions'
 import { ORDER_CREATE_RESET } from '../constants/orderContants'
 import { USER_DETAILS_RESET } from '../constants/userContants'
+import Meta from '../components/Meta'
 
 const PlaceOrderScreen = ({ history }) => {
 
@@ -63,6 +64,7 @@ const PlaceOrderScreen = ({ history }) => {
 
     return (
         <>
+            <Meta title={'Welcome To MenlahShop | Place Order'} />
             <CheckoutSteps step1 step2 step3 step4 />
             <Row>
                 <Col md={8}>

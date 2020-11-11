@@ -8,6 +8,7 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getOrderDetails, payOrder, deliverOrder } from '../actions/orderActions'
 import { ORDER_PAY_RESET, ORDER_DELIVER_RESET } from '../constants/orderContants'
+import Meta from '../components/Meta'
 
 const OrderScreen = ({ match, history }) => {
 
@@ -81,6 +82,7 @@ const OrderScreen = ({ match, history }) => {
     return loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : <>
         <h1>Order: {order._id}</h1>
         <Row>
+                <Meta title={'Welcome To MenlahShop | Order'} />
                 <Col md={8}>
                     <ListGroup variant='flush'>
 

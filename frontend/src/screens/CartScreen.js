@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
+import Meta from '../components/Meta'
 
 const CartScreen = ({ match, location, history }) => {
 
@@ -31,7 +32,10 @@ const CartScreen = ({ match, location, history }) => {
     }
 
     return (
+
+        
         <Row>
+            <Meta title={'Welcome To MenlahShop | Cart'} />
             <Col md={8}>
                 <h1>Shopping Cart</h1>
                 {cartItems.length === 0 ? <Message>Cart is empty <Link to='/'>Go Back</Link></Message> : (

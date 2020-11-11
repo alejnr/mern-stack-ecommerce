@@ -7,6 +7,7 @@ import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { getUserDetails, updateUser } from '../actions/userActions'
 import { USER_UPDATE_RESET } from '../constants/userContants'
+import Meta from '../components/Meta'
 
 const UserEditScreen = ({ match, history }) => {
 
@@ -52,6 +53,8 @@ const UserEditScreen = ({ match, history }) => {
 
         <>
             <Link to='/admin/users' className='btn btn-light my-3'>Go Back</Link>
+
+            <Meta title={'Welcome To MenlahShop | User Edit'} />
 
             <FormContainer>
                 <h1>Edit User</h1>
