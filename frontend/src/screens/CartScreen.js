@@ -38,7 +38,7 @@ const CartScreen = ({ match, location, history }) => {
             <Meta title={'Welcome To MenlahShop | Cart'} />
             <Col md={8}>
                 <h1>Shopping Cart</h1>
-                {cartItems.length === 0 ? <Message>Cart is empty <Link to='/'>Go Back</Link></Message> : (
+                {cartItems.length === 0 ?( <> <Message>Your cart is empty </Message> <Link className='btn  btn-dark' to='/'>Keep shopping</Link> </>)  : (
                     <ListGroup variant='flush'>
                         {cartItems.map(item => (
                             <ListGroup.Item key={item.product}>
