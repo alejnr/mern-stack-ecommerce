@@ -53,6 +53,10 @@ const ProductListScreen = ({ history, match }) => {
         }
     }    
 
+    function truncate(str, n) {
+        return str?.length > n ? str.substr(0, n - 1) + "..." : str
+    }
+
     return (
         <>
             <Row className='align-items-center pb-3'>
@@ -88,7 +92,7 @@ const ProductListScreen = ({ history, match }) => {
                         {products.map(product => (
                             <tr key={product._id}>
                                 <td>{product._id}</td>
-                                <td><a href={`/product/${product._id}`}>{product.name}</a></td>
+                                <td><a href={`/product/${product._id}`}>{truncate(product.name, 40)}</a></td>
                                 <td>${product.price}</td>
                                 <td>{product.category}</td>
                                 <td>{product.brand}</td>
