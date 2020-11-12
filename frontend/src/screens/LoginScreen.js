@@ -33,7 +33,7 @@ const LoginScreen = ({ location, history }) => {
 
     return <FormContainer>
         <Meta title={'Welcome To MenlahShop | Login'} />
-        <h1>Sign In</h1>
+        <h1 className='sm-mt-10px'>Sign In</h1>
         {error && <Message variant='danger'>{error}</Message>}
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>

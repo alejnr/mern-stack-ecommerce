@@ -94,11 +94,11 @@ const PlaceOrderScreen = ({ history }) => {
                                     {cart.cartItems.map((item, index) => (
                                         <ListGroup.Item key={index}>
                                             <Row>
-                                                <Col md={2}>
+                                                <Col className='sm-mb-10px' md={2}>
                                                     <Image src={item.image} alt={item.name} fluid rounded />
                                                 </Col>
 
-                                                <Col>
+                                                <Col className='sm-mb-10px'>
                                                     <Link to={`/product/${item.product}`}>{item.name}</Link> <br />
                                                     {item.qty} x ${item.price} = ${item.qty * item.price}
                                                 </Col>
@@ -114,7 +114,7 @@ const PlaceOrderScreen = ({ history }) => {
                                                     </Form.Control>
                                                 </Col>
 
-                                                <Col md={2}>
+                                                <Col className='sm-mt-10px' md={2}>
                                                     <Button type='button' variant='light' onClick={() => removeFromCartHandler(item.product)}>
                                                         <i className='fas fa-trash'></i>
                                                     </Button>

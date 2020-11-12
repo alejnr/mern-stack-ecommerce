@@ -38,7 +38,7 @@ const CartScreen = ({ match, location, history }) => {
             <Meta title={'Welcome To MenlahShop | Cart'} />
             <Col md={8}>
                 <h1>Shopping Cart</h1>
-                {cartItems.length === 0 ?( <> <Message>Your cart is empty </Message> <Link className='btn  btn-dark' to='/'>Keep shopping</Link> </>)  : (
+                {cartItems.length === 0 ?( <> <Message>Your cart is empty </Message> <Link className='btn sm-mb-10px  btn-dark' to='/'>Keep shopping</Link> </>)  : (
                     <ListGroup variant='flush'>
                         {cartItems.map(item => (
                             <ListGroup.Item key={item.product}>
@@ -46,12 +46,12 @@ const CartScreen = ({ match, location, history }) => {
                                     <Col md={2}>
                                         <Image src={item.image} alt={item.name} fluid rounded />
                                     </Col>
-                                    <Col md={2}>
+                                    <Col className='sm-mt-10px' md={2}>
                                         <Link to={`/product/${item.product}`}>{item.name}</Link>
                                     </Col>
                                     <Col md={2}>${item.price}</Col>
                                     <Col md={2}>
-                                        <Form.Control as='select' value={item.qty} onChange={(e) => 
+                                        <Form.Control className='sm-mt-10px' as='select' value={item.qty} onChange={(e) => 
                                             dispatch(addToCart(item.product, Number(e.target.value)))}>
                                                 {[...Array(item.countInStock).keys()].map((x) => (
                                                     <option key={x + 1} value={x + 1}>
@@ -61,7 +61,7 @@ const CartScreen = ({ match, location, history }) => {
                                         </Form.Control>
                                     </Col>
                                     <Col md={2}>
-                                        <Button type='button' variant='light' onClick={() => removeFromCartHandler(item.product)}>
+                                        <Button className='sm-mt-10px' type='button' variant='light' onClick={() => removeFromCartHandler(item.product)}>
                                             <i className='fas fa-trash'></i>
                                         </Button>
                                     </Col>

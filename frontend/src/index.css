@@ -53,6 +53,20 @@ main {
   .carousel-caption h2 {
     font-size: 3vw;
   }
+  .sm-mt-10px {
+    margin-top: 10px;
+  }
+  .sm-mb-10px {
+    margin-bottom: 10px;
+  }
+  .sm-fs-20px {
+    font-size: 20px !important;
+  }
+}
+
+.img-size {
+  width: 250px !important;
+  height: 250px !important;
 }
 
 #loader-wrapper {
