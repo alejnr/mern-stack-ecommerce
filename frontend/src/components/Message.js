@@ -1,11 +1,12 @@
 import React from 'react'
-import { Toast } from 'react-bootstrap'
+import { Alert } from 'react-bootstrap'
 
 const Message = ({ variant, children }) => {
     return (
-        <Toast variant={variant}>
-            <Toast.Body>{children}</Toast.Body>
-        </Toast>
+
+        <Alert variant={variant}>
+            {children}
+        </Alert>
     )
 }
 
