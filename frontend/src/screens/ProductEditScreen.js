@@ -35,7 +35,7 @@ const ProductEditScreen = ({ match, history }) => {
 
         if(successUpdate) {
             dispatch({ type: PRODUCT_UPDATE_RESET })
-            history.push('/admin/products')
+            history.push('/admin/products/')
         } else {
 
             if(!product.name || product._id !== productId) {
@@ -95,9 +95,9 @@ const ProductEditScreen = ({ match, history }) => {
     return (
 
         <>
-            <Link to='/admin/products' className='btn btn-light my-3'>Go Back</Link>
+            <Link to='/admin/products/' className='btn btn-light my-3'>Go Back</Link>
 
-            <Meta title={'Welcome To MenlahShop | Product Edit'} />
+            <Meta title={' Product Edit | MenlahShop'} />
 
             <FormContainer>
                 <h1>Edit Product</h1>
@@ -139,7 +139,7 @@ const ProductEditScreen = ({ match, history }) => {
                     
                     <Form.Group controlId='description'>
                         <Form.Label>Description</Form.Label>
-                        <Form.Control as='textarea' placeholder='Enter description' value={description} onChange={(e) => setDescription(e.target.value)}></Form.Control>
+                        <Form.Control as='textarea' rows={5} placeholder='Enter description' value={description} onChange={(e) => setDescription(e.target.value)}></Form.Control>
                     </Form.Group>
                     
                     <Form.Group controlId='countInStock'>

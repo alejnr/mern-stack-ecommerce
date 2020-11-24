@@ -32,7 +32,7 @@ const ProfileScreen = ({ location, history }) => {
 
     useEffect(() => {
         if(!userInfo) {
-            history.push('/login?redirect=profile')
+            history.push('/login?redirect=profile/')
         } else {
             if(!user.name || success) {
                 dispatch({ type: USER_UPDATE_PROFILE_RESET })
@@ -55,7 +55,7 @@ const ProfileScreen = ({ location, history }) => {
     }
 
     return <Row>
-        <Meta title={'Welcome To MenlahShop | Profile'} />
+        <Meta title={' Profile | MenlahShop'} />
         <Col md={3}>
         <h2>User Profile</h2>
         {message && <Message variant='danger'>{message}</Message>}
@@ -116,7 +116,7 @@ const ProfileScreen = ({ location, history }) => {
                                     <i className='fas fa-times' style={{ color: 'red' }}></i>
                                 )}</td>
                                 <td>
-                                    <LinkContainer to={`/order/${order._id}`}>
+                                    <LinkContainer to={`/order/${order._id}/`}>
                                         <Button className='btn-sm' variant='light'>Details</Button>
                                     </LinkContainer>
                                 </td>

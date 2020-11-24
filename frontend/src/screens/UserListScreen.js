@@ -24,7 +24,7 @@ const UserListScreen = ({ history }) => {
         if(userInfo && userInfo.isAdmin) {
             dispatch(listUsers())
         } else {
-            history.push('/login')
+            history.push('/login/')
         }
 
     }, [dispatch, userInfo, history, successDelete])
@@ -38,7 +38,7 @@ const UserListScreen = ({ history }) => {
     return (
         <>
             <h1>Users</h1>
-            <Meta title={'Welcome To MenlahShop | Users List'} />
+            <Meta title={' Users List | MenlahShop'} />
             {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
                 <Table striped bordered hover responsive className='table-sm'>
                     <thead>
@@ -60,7 +60,7 @@ const UserListScreen = ({ history }) => {
                                     <i className='fas fa-times' style={{ color: 'red' }}></i>
                                 )}</td>
                                 <td>
-                                    <LinkContainer to={`/admin/user/${user._id}/edit`}>
+                                    <LinkContainer to={`/admin/user/${user._id}/edit/`}>
                                         <Button className='btn-sm mr-3' variant='light'>
                                             <i className='fas fa-edit'></i>
                                         </Button>

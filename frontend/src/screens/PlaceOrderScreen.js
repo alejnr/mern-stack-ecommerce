@@ -17,9 +17,9 @@ const PlaceOrderScreen = ({ history }) => {
     const dispatch = useDispatch()
 
     if (!cart.shippingAddress.address) {
-        history.push('/shipping')
+        history.push('/shipping/')
       } else if (!cart.paymentMethod) {
-        history.push('/payment')
+        history.push('/payment/')
       }
 
     const addDecimals = (num) => {
@@ -39,7 +39,7 @@ const PlaceOrderScreen = ({ history }) => {
 
     useEffect(() => {
         if(success) {
-            history.push(`/order/${order._id}`)
+            history.push(`/order/${order._id}/`)
             dispatch({ type: USER_DETAILS_RESET })
             dispatch({ type: ORDER_CREATE_RESET })
         }
@@ -64,7 +64,7 @@ const PlaceOrderScreen = ({ history }) => {
 
     return (
         <>
-            <Meta title={'Welcome To MenlahShop | Place Order'} />
+            <Meta title={' Place Order | MenlahShop'} />
             <CheckoutSteps step1 step2 step3 step4 />
             <Row>
                 <Col md={8}>
@@ -99,7 +99,7 @@ const PlaceOrderScreen = ({ history }) => {
                                                 </Col>
 
                                                 <Col className='sm-mb-10px'>
-                                                    <Link to={`/product/${item.product}`}>{item.name}</Link> <br />
+                                                    <Link to={`/product/${item.product}/`}>{item.name}</Link> <br />
                                                     {item.qty} x ${item.price} = ${item.qty * item.price}
                                                 </Col>
 

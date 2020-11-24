@@ -32,11 +32,11 @@ const ProductListScreen = ({ history, match }) => {
         dispatch({ type: PRODUCT_CREATE_RESET })
         
         if(!userInfo || !userInfo.isAdmin) {
-            history.push('/login')
+            history.push('/login/')
         }
 
         if (successCreate) {
-            history.push(`/admin/product/${createdProduct._id}/edit`)
+            history.push(`/admin/product/${createdProduct._id}/edit/`)
         } else {
             dispatch(listProducts('', pageNumber))
         }
@@ -60,7 +60,7 @@ const ProductListScreen = ({ history, match }) => {
     return (
         <>
             <Row className='align-items-center pb-3'>
-                <Meta title={'Welcome To MenlahShop | Products List'} />
+                <Meta title={' Products List | MenlahShop'} />
                 <Col>
                     <h1>Products</h1>
                 </Col>
@@ -92,12 +92,12 @@ const ProductListScreen = ({ history, match }) => {
                         {products.map(product => (
                             <tr key={product._id}>
                                 <td>{product._id}</td>
-                                <td><a href={`/product/${product._id}`}>{truncate(product.name, 40)}</a></td>
+                                <td><a href={`/product/${product._id}/`}>{truncate(product.name, 40)}</a></td>
                                 <td>${product.price}</td>
                                 <td>{product.category}</td>
                                 <td>{product.brand}</td>
                                 <td>
-                                    <LinkContainer to={`/admin/product/${product._id}/edit`}>
+                                    <LinkContainer to={`/admin/product/${product._id}/edit/`}>
                                         <Button className='btn-sm mr-3' variant='light'>
                                             <i className='fas fa-edit'></i>
                                         </Button>

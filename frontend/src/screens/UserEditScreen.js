@@ -29,7 +29,7 @@ const UserEditScreen = ({ match, history }) => {
 
         if(successUpdate) {
             dispatch({ type: USER_UPDATE_RESET })
-            history.push('/admin/users')
+            history.push('/admin/users/')
         } else {
 
             if(!user.name || user._id !== userId) {
@@ -52,9 +52,9 @@ const UserEditScreen = ({ match, history }) => {
     return (
 
         <>
-            <Link to='/admin/users' className='btn btn-light my-3'>Go Back</Link>
+            <Link to='/admin/users/' className='btn btn-light my-3'>Go Back</Link>
 
-            <Meta title={'Welcome To MenlahShop | User Edit'} />
+            <Meta title={' User Edit | MenlahShop'} />
 
             <FormContainer>
                 <h1>Edit User</h1>

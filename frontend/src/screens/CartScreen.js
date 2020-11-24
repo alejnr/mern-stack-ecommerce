@@ -35,7 +35,7 @@ const CartScreen = ({ match, location, history }) => {
 
         
         <Row>
-            <Meta title={'Welcome To MenlahShop | Cart'} />
+            <Meta title={' Cart | MenlahShop'} />
             <Col md={8}>
                 <h1>Items In Cart</h1>
                 {cartItems.length === 0 ?( <> <Message>Your cart is empty! </Message> <Link className='btn sm-mb-10px  btn-dark' to='/'>Keep shopping</Link> </>)  : (

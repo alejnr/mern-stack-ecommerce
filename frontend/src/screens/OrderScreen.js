@@ -82,7 +82,7 @@ const OrderScreen = ({ match, history }) => {
     return loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : <>
         <h1 className='sm-fs-20px text-muted'>Order #: {order._id}</h1>
         <Row>
-                <Meta title={'Welcome To MenlahShop | Order'} />
+                <Meta title={' Order | MenlahShop'} />
                 <Col md={8}>
                     <ListGroup variant='flush'>
 
@@ -121,7 +121,7 @@ const OrderScreen = ({ match, history }) => {
                                                 </Col>
 
                                                 <Col className='sm-mt-10px'>
-                                                    <Link to={`/product/${item.product}`}>{item.name}</Link> <br />
+                                                    <Link to={`/product/${item.product}/`}>{item.name}</Link> <br />
                                                     {item.qty} x ${item.price} = ${item.qty * item.price}
                                                 </Col>
                                             </Row>

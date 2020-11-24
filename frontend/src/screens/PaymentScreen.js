@@ -12,7 +12,7 @@ const PaymentScreen = ({ history }) => {
     const { shippingAddress } = cart
 
     if (!shippingAddress.address) {
-        history.push('/shipping')
+        history.push('/shipping/')
     }
 
     const [paymentMethod, setPaymentMethod] = useState('PayPal')
@@ -22,11 +22,11 @@ const PaymentScreen = ({ history }) => {
     const submitHandler = (e) => {
         e.preventDefault()
         dispatch(savePaymentMethod(paymentMethod))
-        history.push('/placeorder')
+        history.push('/placeorder/')
     }
     
     return <FormContainer>
-        <Meta title={'Welcome To MenlahShop | Payment'} />
+        <Meta title={' Payment | MenlahShop'} />
         <CheckoutSteps step1 step2 step3 />
         <h1>Payment Method</h1>
         <Form onSubmit={submitHandler}>

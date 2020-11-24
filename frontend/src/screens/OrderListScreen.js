@@ -29,7 +29,7 @@ const UserListScreen = ({ history }) => {
     return (
         <>
             <h1>Orders</h1>
-            <Meta title={'Welcome To MenlahShop | Orders List'} />
+            <Meta title={' Orders | MenlahShop'} />
             {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
                 <Table striped bordered hover responsive className='table-sm'>
                     <thead>

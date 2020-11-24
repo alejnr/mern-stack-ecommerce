@@ -36,13 +36,13 @@ const Header = () => {
 
                 <Nav className="ml-auto">
 
-                <LinkContainer to='/cart'>
+                <LinkContainer to='/cart/'>
                     <Nav.Link><i className='fas fa-shopping-cart'></i> Cart <Badge variant="primary">{cartItems.reduce((acc, item) => acc + item.qty, 0)}</Badge></Nav.Link>
                 </LinkContainer>
 
                 {userInfo ? (
                     <NavDropdown title={'Welcome, ' + userInfo.name} id='username'>
-                        <LinkContainer to='/profile'>
+                        <LinkContainer to='/profile/'>
                             <NavDropdown.Item>Profile</NavDropdown.Item>
                         </LinkContainer>
 
@@ -50,22 +50,22 @@ const Header = () => {
                     </NavDropdown>
                 ) : 
 
-                <LinkContainer to='/login'>
+                <LinkContainer to='/login/'>
                 <Nav.Link><i className='fas fa-user'></i>  Signin / Signup</Nav.Link>
                 </LinkContainer>
                 }
 
                 {userInfo && userInfo.isAdmin && (
                 <NavDropdown title='Dashboard' id='adminmenu'>
-                    <LinkContainer to='/admin/users'>
+                    <LinkContainer to='/admin/users/'>
                         <NavDropdown.Item>Users</NavDropdown.Item>
                     </LinkContainer>
                     
-                    <LinkContainer to='/admin/products'>
+                    <LinkContainer to='/admin/products/'>
                         <NavDropdown.Item>Products</NavDropdown.Item>
                     </LinkContainer>
                     
-                    <LinkContainer to='/admin/orders'>
+                    <LinkContainer to='/admin/orders/'>
                         <NavDropdown.Item>Orders</NavDropdown.Item>
                     </LinkContainer>
 

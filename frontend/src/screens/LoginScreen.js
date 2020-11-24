@@ -32,7 +32,7 @@ const LoginScreen = ({ location, history }) => {
     }
 
     return <FormContainer>
-        <Meta title={'Welcome To MenlahShop | Login'} />
+        <Meta title={' Login | MenlahShop'} />
         <h1 className='sm-mt-10px'>Sign In</h1>
         {error && <Message variant='danger'>{error}</Message>}
         {loading && <Loader />}
@@ -54,7 +54,7 @@ const LoginScreen = ({ location, history }) => {
 
         <Row className='py-3'>
             <Col>
-                New Customer ? <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>Register</Link>
+                New Customer ? <Link to={redirect ? `/register?redirect=${redirect}` : '/register/'}>Register</Link>
             </Col>
         </Row>
     </FormContainer>
