@@ -144,7 +144,7 @@ const ProductScreen = ({ history, match }) => {
             <Row>
                 <Col md={6}>
 
-                    <h2 className='my-3'>Reviews</h2>
+                    <h2 className='my-3'>Product Reviews</h2>
                     {product.reviews.length === 0 && <Message>No reviews yet, Be the first to review</Message>}
                     
                     <ListGroup variant='flush'>
