@@ -26,8 +26,8 @@ const UserListScreen = ({ history }) => {
 
   return (
     <>
-      <h1>Orders</h1>
-      <Meta title={' Orders | CentCellStore'} />
+      <h1>Ordini</h1>
+      <Meta title={' Elenco Ordini | CentCellStore'} />
       {loading ? (
         <Loader />
       ) : error ? (
@@ -37,11 +37,11 @@ const UserListScreen = ({ history }) => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>USER</th>
-              <th>DATE</th>
-              <th>TOTAL</th>
-              <th>PAID</th>
-              <th>DELIVERED</th>
+              <th>UTENTE</th>
+              <th>DATA</th>
+              <th>TOTALE</th>
+              <th>PAGATO</th>
+              <th>CONSEGNATO</th>
               <th></th>
             </tr>
           </thead>
@@ -51,7 +51,7 @@ const UserListScreen = ({ history }) => {
                 <td>{order._id}</td>
                 <td>{order.user && order.user.name}</td>
                 <td>{order.createdAt.substring(0, 10)}</td>
-                <td>${order.totalPrice}</td>
+                <td>€{order.totalPrice}</td>
                 <td>
                   {order.isPaid ? (
                     order.paidAt.substring(0, 10)
@@ -70,7 +70,7 @@ const UserListScreen = ({ history }) => {
                 <td>
                   <LinkContainer to={`/order/${order._id}`}>
                     <Button className='btn-sm' variant='light'>
-                      Details
+                      Dettagli
                     </Button>
                   </LinkContainer>
                 </td>

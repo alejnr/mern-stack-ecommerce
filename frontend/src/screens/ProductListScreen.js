@@ -66,7 +66,7 @@ const ProductListScreen = ({ history, match }) => {
   }
 
   const deleteHandler = (id) => {
-    if (window.confirm('Are you sure want to delete this product ?')) {
+    if (window.confirm('Sei sicuro di voler eliminare questo prodotto?')) {
       dispatch(deleteProduct(id))
     }
   }
@@ -78,13 +78,13 @@ const ProductListScreen = ({ history, match }) => {
   return (
     <>
       <Row className='align-items-center pb-3'>
-        <Meta title={' Products List | CentCellStore'} />
+        <Meta title={' Elenco Prodotti | CentCellStore'} />
         <Col>
-          <h1>Products</h1>
+          <h1>Prodotti</h1>
         </Col>
         <Col className='text-right'>
           <Button className='my-3' onClick={createProductHandler}>
-            <i className='fas fa-plus'></i> Create Product
+            <i className='fas fa-plus'></i> Crea Prodotto
           </Button>
         </Col>
       </Row>
@@ -105,10 +105,10 @@ const ProductListScreen = ({ history, match }) => {
             <thead>
               <tr>
                 <th>ID</th>
-                <th>NAME</th>
-                <th>PRICE</th>
-                <th>CATEGORY</th>
-                <th>BRAND</th>
+                <th>NOME</th>
+                <th>PREZZO</th>
+                <th>CATEGORIA</th>
+                <th>MARCA</th>
                 <th></th>
               </tr>
             </thead>
@@ -121,7 +121,7 @@ const ProductListScreen = ({ history, match }) => {
                       {truncate(product.name, 40)}
                     </a>
                   </td>
-                  <td>${product.price}</td>
+                  <td>€{product.price}</td>
                   <td>{product.category}</td>
                   <td>{product.brand}</td>
                   <td>

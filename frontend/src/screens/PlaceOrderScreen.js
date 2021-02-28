@@ -69,34 +69,34 @@ const PlaceOrderScreen = ({ history }) => {
 
   return (
     <>
-      <Meta title={' Place Order | CentCellStore'} />
+      <Meta title={' Invia ordine | CentCellStore'} />
       <CheckoutSteps step1 step2 step3 step4 />
       <Row>
         <Col md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
-              <h2>Shipping</h2>
+              <h2>Spedizione</h2>
               <p>
-                <strong>Address:</strong> {cart.shippingAddress.address},{' '}
+                <strong>Indirizzo:</strong> {cart.shippingAddress.address},{' '}
                 {cart.shippingAddress.city}, {cart.shippingAddress.postalCode},{' '}
                 {cart.shippingAddress.country}
               </p>
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Payment Method</h2>
-              <strong>Method: </strong>
+              <h2>Metodo di pagamento</h2>
+              <strong>Metodo: </strong>
               {cart.paymentMethod}
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Order Items</h2>
+              <h2>Articoli dell'ordine</h2>
               {cart.cartItems.length === 0 ? (
                 <>
                   {' '}
-                  <Message>Your cart is empty!</Message>{' '}
+                  <Message>Il tuo carrello è vuoto!</Message>{' '}
                   <Link className='btn sm-mb-10px  btn-dark' to='/'>
-                    Keep shopping
+                    Continua a fare shopping
                   </Link>{' '}
                 </>
               ) : (
@@ -118,7 +118,7 @@ const PlaceOrderScreen = ({ history }) => {
                             {item.name}
                           </Link>{' '}
                           <br />
-                          {item.qty} x ${item.price} = ${item.qty * item.price}
+                          {item.qty} x €{item.price} = €{item.qty * item.price}
                         </Col>
 
                         <Col md={2}>
@@ -161,34 +161,34 @@ const PlaceOrderScreen = ({ history }) => {
           <Card>
             <ListGroup variant='flush'>
               <ListGroup.Item>
-                <h2>Order Summary</h2>
+                <h2>Riepilogo dell'ordine</h2>
               </ListGroup.Item>
 
               <ListGroup.Item>
                 <Row>
-                  <Col>Items</Col>
-                  <Col>${cart.itemsPrice}</Col>
+                  <Col>Elementi</Col>
+                  <Col>€{cart.itemsPrice}</Col>
                 </Row>
               </ListGroup.Item>
 
               <ListGroup.Item>
                 <Row>
-                  <Col>Shipping</Col>
-                  <Col>${cart.shippingPrice}</Col>
+                  <Col>Spedizione</Col>
+                  <Col>€{cart.shippingPrice}</Col>
                 </Row>
               </ListGroup.Item>
 
               <ListGroup.Item>
                 <Row>
-                  <Col>Tax</Col>
-                  <Col>${cart.taxPrice}</Col>
+                  <Col>Imposta</Col>
+                  <Col>€{cart.taxPrice}</Col>
                 </Row>
               </ListGroup.Item>
 
               <ListGroup.Item>
                 <Row>
-                  <Col>Total</Col>
-                  <Col>${cart.totalPrice}</Col>
+                  <Col>Totale</Col>
+                  <Col>€{cart.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
 
@@ -203,7 +203,7 @@ const PlaceOrderScreen = ({ history }) => {
                   disabled={cart.cartItems.length === 0}
                   onClick={placeOrderHandler}
                 >
-                  Place Order
+                  Invia ordine
                 </Button>
               </ListGroup.Item>
             </ListGroup>

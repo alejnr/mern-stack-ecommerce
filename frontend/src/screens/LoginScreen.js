@@ -33,16 +33,16 @@ const LoginScreen = ({ location, history }) => {
 
   return (
     <FormContainer>
-      <Meta title={' Login | CentCellStore'} />
-      <h1 className='sm-mt-10px'>Sign In</h1>
+      <Meta title={' Accedi | CentCellStore'} />
+      <h1 className='sm-mt-10px'>Accedi</h1>
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='email'>
-          <Form.Label>Email Address</Form.Label>
+          <Form.Label>Indirizzo e-mail</Form.Label>
           <Form.Control
             type='email'
-            placeholder='Enter email'
+            placeholder="Inserisci l'email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
@@ -52,22 +52,22 @@ const LoginScreen = ({ location, history }) => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Enter password'
+            placeholder='Inserire la password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Button type='submit' variant='primary'>
-          Sign In
+          Accedi
         </Button>
       </Form>
 
       <Row className='py-3'>
         <Col>
-          New Customer ?{' '}
+          Nuovo cliente ?{' '}
           <Link to={redirect ? `/register?redirect=${redirect}` : '/register/'}>
-            Register
+            Registrati
           </Link>
         </Col>
       </Row>

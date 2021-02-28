@@ -32,7 +32,7 @@ const RegisterScreen = ({ location, history }) => {
   const submitHandler = (e) => {
     e.preventDefault()
     if (password !== confirmPassword) {
-      setMessage('Passwords do not match')
+      setMessage('Le passwords non corrispondono')
     } else {
       dispatch(register(name, email, password))
     }
@@ -40,27 +40,27 @@ const RegisterScreen = ({ location, history }) => {
 
   return (
     <FormContainer>
-      <Meta title={' Register | CentCellStore'} />
-      <h1>Sign Up</h1>
+      <Meta title={' Registrati | CentCellStore'} />
+      <h1>Registrati</h1>
       {message && <Message variant='danger'>{message}</Message>}
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='name'>
-          <Form.Label>Name</Form.Label>
+          <Form.Label>Nome</Form.Label>
           <Form.Control
             type='name'
-            placeholder='Enter name'
+            placeholder='Inserisci il nome'
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group controlId='email'>
-          <Form.Label>Email Address</Form.Label>
+          <Form.Label>Indirizzo e-mail</Form.Label>
           <Form.Control
             type='email'
-            placeholder='Enter email'
+            placeholder="Inserisci l'email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
@@ -70,17 +70,17 @@ const RegisterScreen = ({ location, history }) => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Enter password'
+            placeholder='Inserire la password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group controlId='confirmPassword'>
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label>Conferma password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Confirm password'
+            placeholder='Conferma password'
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></Form.Control>
@@ -93,9 +93,9 @@ const RegisterScreen = ({ location, history }) => {
 
       <Row className='py-3'>
         <Col>
-          Have an Account ?{' '}
+          Hai un Account ?{' '}
           <Link to={redirect ? `/login?redirect=${redirect}` : '/login/'}>
-            Login
+            Accedi
           </Link>
         </Col>
       </Row>

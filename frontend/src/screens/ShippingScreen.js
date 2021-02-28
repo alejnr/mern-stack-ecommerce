@@ -25,15 +25,15 @@ const ShippingScreen = ({ history }) => {
 
   return (
     <FormContainer>
-      <Meta title={' Shipping | CentCellStore'} />
+      <Meta title={' Spedizione | CentCellStore'} />
       <CheckoutSteps step1 step2 />
-      <h1>Shipping</h1>
+      <h1>Spedizione</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='address'>
-          <Form.Label>Address</Form.Label>
+          <Form.Label>Indirizzo</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter address'
+            placeholder="Inserisci l'Indirizzo"
             value={address}
             required
             onChange={(e) => setAddress(e.target.value)}
@@ -41,10 +41,10 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Form.Group controlId='city'>
-          <Form.Label>City</Form.Label>
+          <Form.Label>Città</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter city'
+            placeholder='Inserisci la città'
             value={city}
             required
             onChange={(e) => setCity(e.target.value)}
@@ -52,10 +52,10 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Form.Group controlId='postalCode'>
-          <Form.Label>Postal Code</Form.Label>
+          <Form.Label>Codice postale</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter postal code'
+            placeholder='Inserisci il codice postale'
             value={postalCode}
             required
             onChange={(e) => setPostalCode(e.target.value)}
@@ -63,10 +63,10 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Form.Group controlId='country'>
-          <Form.Label>Country</Form.Label>
+          <Form.Label>Paese</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter country'
+            placeholder='Inserisci il paese'
             value={country}
             required
             onChange={(e) => setCountry(e.target.value)}
@@ -74,7 +74,7 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Button type='submit' variant='primary'>
-          Continue
+          Continua
         </Button>
       </Form>
     </FormContainer>
