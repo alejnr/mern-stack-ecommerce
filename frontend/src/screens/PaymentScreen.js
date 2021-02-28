@@ -26,7 +26,7 @@ const PaymentScreen = ({ history }) => {
     }
     
     return <FormContainer>
-        <Meta title={' Payment | MenlahShop'} />
+        <Meta title={' Payment | CentCellStore'} />
         <CheckoutSteps step1 step2 step3 />
         <h1>Payment Method</h1>
         <Form onSubmit={submitHandler}>

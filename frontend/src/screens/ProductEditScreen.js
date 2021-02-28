@@ -97,7 +97,7 @@ const ProductEditScreen = ({ match, history }) => {
         <>
             <Link to='/admin/products/' className='btn btn-light my-3'>Go Back</Link>
 
-            <Meta title={' Product Edit | MenlahShop'} />
+            <Meta title={' Product Edit | CentCellStore'} />
 
             <FormContainer>
                 <h1>Edit Product</h1>

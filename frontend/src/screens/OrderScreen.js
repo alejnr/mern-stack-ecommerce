@@ -82,7 +82,7 @@ const OrderScreen = ({ match, history }) => {
     return loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : <>
         <h1 className='sm-fs-20px text-muted'>Order #: {order._id}</h1>
         <Row>
-                <Meta title={' Order | MenlahShop'} />
+                <Meta title={' Order | CentCellStore'} />
                 <Col md={8}>
                     <ListGroup variant='flush'>
 
