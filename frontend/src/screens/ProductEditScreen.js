@@ -95,12 +95,12 @@ const ProductEditScreen = ({ match, history }) => {
     return (
 
         <>
-            <Link to='/admin/products/' className='btn btn-light my-3'>Go Back</Link>
+            <Link to='/admin/products/' className='btn btn-light my-3'>Torna Indietro</Link>
 
-            <Meta title={' Product Edit | CentCellStore'} />
+            <Meta title={' Modifica Prodotto | CentCellStore'} />
 
             <FormContainer>
-                <h1>Edit Product</h1>
+                <h1>Modifica Prodotto</h1>
 
                 {loadingUpdate && <Loader />}
 
@@ -111,44 +111,44 @@ const ProductEditScreen = ({ match, history }) => {
                 <Form onSubmit={submitHandler}>
 
                     <Form.Group controlId='name'>
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control type='name' placeholder='Enter name' value={name} onChange={(e) => setName(e.target.value)}></Form.Control>
+                        <Form.Label>Nome</Form.Label>
+                        <Form.Control type='name' placeholder='Inserire il nome' value={name} onChange={(e) => setName(e.target.value)}></Form.Control>
                     </Form.Group>
 
                     <Form.Group controlId='price'>
-                        <Form.Label>Price</Form.Label>
-                        <Form.Control type='number' placeholder='Enter price' value={price} onChange={(e) => setPrice(e.target.value)}></Form.Control>
+                        <Form.Label>Prezzo</Form.Label>
+                        <Form.Control type='number' placeholder='Inserire il prezzo' value={price} onChange={(e) => setPrice(e.target.value)}></Form.Control>
                     </Form.Group>
                     
                     <Form.Group controlId='image'>
-                        <Form.Label>Image</Form.Label>
-                        <Form.Control type='text' placeholder='Enter image url' value={image} onChange={(e) => setImage(e.target.value)}></Form.Control>
-                        <Form.File className='mt-3' id='image-file' label='Choose File' custom onChange={uploadFileHandler}></Form.File>
+                        <Form.Label>Immagine</Form.Label>
+                        <Form.Control type='text' placeholder="Inserisci l'URL dell'immagine" value={image} onChange={(e) => setImage(e.target.value)}></Form.Control>
+                        <Form.File className='mt-3' id='image-file' label='Scegli il file' custom onChange={uploadFileHandler}></Form.File>
                         {uploading && <Loader />}
                     </Form.Group>
                     
                     <Form.Group controlId='brand'>
-                        <Form.Label>Brand</Form.Label>
-                        <Form.Control type='text' placeholder='Enter brand' value={brand} onChange={(e) => setBrand(e.target.value)}></Form.Control>
+                        <Form.Label>Marca</Form.Label>
+                        <Form.Control type='text' placeholder='Inserisci il marchio' value={brand} onChange={(e) => setBrand(e.target.value)}></Form.Control>
                     </Form.Group>
                     
                     <Form.Group controlId='category'>
-                        <Form.Label>Category</Form.Label>
-                        <Form.Control type='text' placeholder='Enter category' value={category} onChange={(e) => setCategory(e.target.value)}></Form.Control>
+                        <Form.Label>Categoria</Form.Label>
+                        <Form.Control type='text' placeholder='Inserisci la categoria' value={category} onChange={(e) => setCategory(e.target.value)}></Form.Control>
                     </Form.Group>
                     
                     <Form.Group controlId='description'>
-                        <Form.Label>Description</Form.Label>
-                        <Form.Control as='textarea' rows={5} placeholder='Enter description' value={description} onChange={(e) => setDescription(e.target.value)}></Form.Control>
+                        <Form.Label>Descrizione</Form.Label>
+                        <Form.Control as='textarea' rows={5} placeholder='Immettere la descrizione' value={description} onChange={(e) => setDescription(e.target.value)}></Form.Control>
                     </Form.Group>
                     
                     <Form.Group controlId='countInStock'>
-                        <Form.Label>Count In Stock</Form.Label>
+                        <Form.Label>Conta in magazzino</Form.Label>
                         <Form.Control type='number' placeholder='Enter countInStock' value={countInStock} onChange={(e) => setCountInStock(e.target.value)}></Form.Control>
                     </Form.Group>
 
                     <Button type='submit' variant='primary'>
-                        Update
+                        Aggiorna
                     </Button>
                 </Form>
                 )}

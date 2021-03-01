@@ -51,13 +51,13 @@ const UserEditScreen = ({ match, history }) => {
   return (
     <>
       <Link to='/admin/users/' className='btn btn-light my-3'>
-        Go Back
+        Torna Indietro
       </Link>
 
-      <Meta title={' User Edit | CentCellStore'} />
+      <Meta title={' Modifica Utente | CentCellStore'} />
 
       <FormContainer>
-        <h1>Edit User</h1>
+        <h1>Modifica Utente</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
@@ -67,20 +67,20 @@ const UserEditScreen = ({ match, history }) => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId='name'>
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Nome</Form.Label>
               <Form.Control
                 type='name'
-                placeholder='Enter name'
+                placeholder='Inserisci il nome'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
             <Form.Group controlId='email'>
-              <Form.Label>Email Address</Form.Label>
+              <Form.Label>Indirizzo e-mail</Form.Label>
               <Form.Control
                 type='email'
-                placeholder='Enter email'
+                placeholder="Inserisci l'email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></Form.Control>
@@ -89,14 +89,14 @@ const UserEditScreen = ({ match, history }) => {
             <Form.Group controlId='isadmin'>
               <Form.Check
                 type='checkbox'
-                label='Is Admin'
+                label='È amministratore'
                 checked={isAdmin}
                 onChange={(e) => setIsAdmin(e.target.checked)}
               ></Form.Check>
             </Form.Group>
 
             <Button type='submit' variant='primary'>
-              Update
+              Aggiorna
             </Button>
           </Form>
         )}

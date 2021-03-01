@@ -28,15 +28,15 @@ const UserListScreen = ({ history }) => {
   }, [dispatch, userInfo, history, successDelete])
 
   const deleteHandler = (id) => {
-    if (window.confirm('Are you sure')) {
+    if (window.confirm('Sei sicuro di voler eliminare questo utente?')) {
       dispatch(deleteUser(id))
     }
   }
 
   return (
     <>
-      <h1>Users</h1>
-      <Meta title={' Users List | CentCellStore'} />
+      <h1>Utenti</h1>
+      <Meta title={' Elenco Utenti | CentCellStore'} />
       {loading ? (
         <Loader />
       ) : error ? (
@@ -46,8 +46,8 @@ const UserListScreen = ({ history }) => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>NAME</th>
-              <th>EMAIL</th>
+              <th>NOME</th>
+              <th>E-MAIL</th>
               <th>ADMIN</th>
               <th></th>
             </tr>
