@@ -4,6 +4,11 @@ import { Container } from 'react-bootstrap'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
+import AboutScreen from './screens/AboutScreen'
+import ContactScreen from './screens/ContactScreen'
+import RefundScreen from './screens/RefundScreen'
+import PrivacyScreen from './screens/PrivacyScreen'
+import TermsScreen from './screens/TermsScreen'
 import ProductScreen from './screens/ProductScreen'
 import CartScreen from './screens/CartScreen'
 import LoginScreen from './screens/LoginScreen'
@@ -19,40 +24,54 @@ import ProductListScreen from './screens/ProductListScreen'
 import UserEditScreen from './screens/UserEditScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 
-
-
 const App = () => {
   return (
     <Router>
       <>
-      <Header />
-      <main className='py-3'>
-        <Container>
-          <Route path='/order/:id' component={OrderScreen} />
-          <Route path='/placeorder' component={PlaceOrderScreen} />
-          <Route path='/payment' component={PaymentScreen} />
-          <Route path='/shipping' component={ShippingScreen} />
-          <Route path='/product/:id' component={ProductScreen} />
-          <Route path='/cart/:id?' component={CartScreen} />
-          <Route path='/admin/users' component={UserListScreen} />
-          <Route path='/admin/orders' component={OrderListScreen} />
-          <Route path='/admin/products' component={ProductListScreen} exact />
-          <Route path='/admin/products/:pageNumber' component={ProductListScreen} exact />
-          <Route path='/admin/user/:id/edit' component={UserEditScreen} />
-          <Route path='/admin/product/:id/edit' component={ProductEditScreen} />
-          <Route path='/profile' component={ProfileScreen} />
-          <Route path='/register' component={RegisterScreen} />
-          <Route path='/login' component={LoginScreen} />
-          <Route path='/search_query=:keyword' component={HomeScreen} exact />
-          <Route path='/page/:pageNumber' component={HomeScreen} exact />
-          <Route path='/search/:keyword/page/:pageNumber' component={HomeScreen} exact />
-          <Route path='/' component={HomeScreen} exact />
-        </Container>
-      </main>
-      <Footer />
-    </>
+        <Header />
+        <main className='py-3'>
+          <Container>
+            <Route path='/order/:id' component={OrderScreen} />
+            <Route path='/placeorder' component={PlaceOrderScreen} />
+            <Route path='/payment' component={PaymentScreen} />
+            <Route path='/shipping' component={ShippingScreen} />
+            <Route path='/product/:id' component={ProductScreen} />
+            <Route path='/cart/:id?' component={CartScreen} />
+            <Route path='/admin/users' component={UserListScreen} />
+            <Route path='/admin/orders' component={OrderListScreen} />
+            <Route path='/admin/products' component={ProductListScreen} exact />
+            <Route
+              path='/admin/products/:pageNumber'
+              component={ProductListScreen}
+              exact
+            />
+            <Route path='/admin/user/:id/edit' component={UserEditScreen} />
+            <Route
+              path='/admin/product/:id/edit'
+              component={ProductEditScreen}
+            />
+            <Route path='/profile' component={ProfileScreen} />
+            <Route path='/register' component={RegisterScreen} />
+            <Route path='/login' component={LoginScreen} />
+            <Route path='/search_query=:keyword' component={HomeScreen} exact />
+            <Route path='/page/:pageNumber' component={HomeScreen} exact />
+            <Route
+              path='/search/:keyword/page/:pageNumber'
+              component={HomeScreen}
+              exact
+            />
+            <Route path='/' component={HomeScreen} exact />
+            <Route path='/about-us' component={AboutScreen} />
+            <Route path='/contact-us' component={ContactScreen} />
+            <Route path='/return-and-refund-policy' component={RefundScreen} />
+            <Route path='/privacy-policy' component={PrivacyScreen} />
+            <Route path='/terms-and-conditions' component={TermsScreen} />
+          </Container>
+        </main>
+        <Footer />
+      </>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
