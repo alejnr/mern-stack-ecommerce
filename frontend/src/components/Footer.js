@@ -19,10 +19,12 @@ function Footer() {
           </div>
 
           <div className='col-6 col-md'>
-            <h5>
-              <Link to='/about-us/'>Chi Siamo</Link>
-            </h5>
             <ul className='list-unstyled text-small'>
+              <li>
+                <Link className='text-muted' to='/about-us/'>
+                  Chi Siamo
+                </Link>
+              </li>
               <li>
                 <Link className='text-muted' to='/contact-us/'>
                   Contattaci
@@ -31,6 +33,15 @@ function Footer() {
               <li>
                 <Link className='text-muted' to='/return-and-refund-policy/'>
                   Vendite e rimborsi
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className='col-6 col-md'>
+            <ul className='list-unstyled text-small'>
+              <li>
+                <Link className='text-muted' to='/legal/faq/'>
+                  FAQ
                 </Link>
               </li>
               <li>

@@ -9,6 +9,7 @@ import ContactScreen from './screens/ContactScreen'
 import RefundScreen from './screens/RefundScreen'
 import PrivacyScreen from './screens/PrivacyScreen'
 import TermsScreen from './screens/TermsScreen'
+import FaqScreen from './screens/FaqScreen'
 import ProductScreen from './screens/ProductScreen'
 import CartScreen from './screens/CartScreen'
 import LoginScreen from './screens/LoginScreen'
@@ -66,6 +67,7 @@ const App = () => {
             <Route path='/return-and-refund-policy' component={RefundScreen} />
             <Route path='/privacy-policy' component={PrivacyScreen} />
             <Route path='/terms-and-conditions' component={TermsScreen} />
+            <Route path='/legal/faq' component={FaqScreen} />
           </Container>
         </main>
         <Footer />
