@@ -83,7 +83,7 @@ const Header = () => {
                 </NavDropdown>
               )}
               <LinkContainer className='notLarge' to='/legal/faq/'>
-                <Nav.Link>FAQ</Nav.Link>
+                <Nav.Link>FAQs</Nav.Link>
               </LinkContainer>
             </Nav>
           </Navbar.Collapse>

@@ -41,7 +41,7 @@ function Footer() {
             <ul className='list-unstyled text-small'>
               <li>
                 <Link className='text-muted' to='/legal/faq/'>
-                  FAQ
+                  FAQs
                 </Link>
               </li>
               <li>
