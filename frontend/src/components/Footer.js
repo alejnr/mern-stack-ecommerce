@@ -40,7 +40,7 @@ function Footer() {
           <div className='col-6 col-md'>
             <ul className='list-unstyled text-small'>
               <li>
-                <Link className='text-muted' to='/legal/faq/'>
+                <Link className='text-muted' to='/legal/faqs/'>
                   FAQs
                 </Link>
               </li>

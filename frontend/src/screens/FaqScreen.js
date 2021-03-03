@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Faq from 'react-faq-component'
 
 const data = {
-  title: 'FAQ',
+  title: 'FAQs',
   rows: [
     {
       title: 'Chi siamo?',

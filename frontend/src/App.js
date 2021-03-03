@@ -67,7 +67,7 @@ const App = () => {
             <Route path='/return-and-refund-policy' component={RefundScreen} />
             <Route path='/privacy-policy' component={PrivacyScreen} />
             <Route path='/terms-and-conditions' component={TermsScreen} />
-            <Route path='/legal/faq' component={FaqScreen} />
+            <Route path='/legal/faqs' component={FaqScreen} />
           </Container>
         </main>
         <Footer />
