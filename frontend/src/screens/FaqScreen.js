@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
 import Faq from 'react-faq-component'
+import Meta from '../components/Meta'
 
 const data = {
   title: 'FAQs',
   rows: [
     {
+      title:
+        "Siamo sempre a disposizione dei nostri clienti, ma prima di contattarci, ti preghiamo di vedere tra le domande elencate in questa sezione se c'è quella che fa al caso tuo.",
+    },
+    {
       title: 'Chi siamo?',
       content:
-        "CentCellStore è una catena in franchising di prodotti venduti con la formula <strong>tutto a 1 euro</strong> e comprende negozi collocati in tutto il territorio nazionale e in zone altamente commerciali, inoltre il successo dell'iniziativa ci consente una costante espansione.",
+        "CentCellStore è una catena in franchising di prodotti venduti con la formula <strong>tutto a 100 euro</strong> e comprende negozi collocati in tutto il territorio nazionale e in zone altamente commerciali, inoltre il successo dell'iniziativa ci consente una costante espansione.",
     },
     {
       title: 'Cosa vendiamo?',
       content:
-        "I nostri prodotti derivano da una ampia scelta costantemente assortita e di vario genere: dagli oggetti per eventi festivi alla cosmesi personale all'igiene della persona e della casa ai casalinghi di uso quotidiano agli accessori di abbigliamento ai giocattoli e giochi di gruppo ai complementi d'arredo.",
+        'I nostri cellulari derivano da una ampia scelta costantemente assortita e di varie marche.',
     },
     {
       title: 'Perché i prezzi sono così bassi?',
@@ -66,6 +71,7 @@ export default class FaqScreen extends Component {
   render() {
     return (
       <div className='mt-3'>
+        <Meta title={'Faqs | CentCellStore'} />
         <Faq
           data={data}
           styles={{ rowContentPaddingTop: '5px', rowTitleTextSize: '20px' }}
